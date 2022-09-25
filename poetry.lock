@@ -53,8 +53,8 @@ spidev = "*"
 [package.extras]
 example-depends = ["beautifulsoup4", "geocoder", "requests"]
 fonts = ["font-fredoka-one", "font-hanken-grotesk", "font-intuitive", "font-source-serif-pro"]
-rpi = ["rpi.gpio"]
-rpi-gpio-output = ["rpi.gpio"]
+rpi = ["RPi.GPIO"]
+rpi-gpio-output = ["RPi.GPIO"]
 
 [package.source]
 type = "legacy"
@@ -92,11 +92,15 @@ reference = "piwheels"
 
 [[package]]
 name = "pillow"
-version = "8.2.0"
+version = "9.2.0"
 description = "Python Imaging Library (Fork)"
 category = "main"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.7"
+
+[package.extras]
+docs = ["furo", "olefile", "sphinx (>=2.4)", "sphinx-copybutton", "sphinx-issues (>=3.0.1)", "sphinx-removed-in", "sphinxext-opengraph"]
+tests = ["check-manifest", "coverage", "defusedxml", "markdown2", "olefile", "packaging", "pyroma", "pytest", "pytest-cov", "pytest-timeout"]
 
 [package.source]
 type = "legacy"
@@ -134,7 +138,7 @@ idna = ">=2.5,<3"
 urllib3 = ">=1.21.1,<1.27"
 
 [package.extras]
-security = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)"]
+security = ["cryptography (>=1.3.4)", "pyOpenSSL (>=0.14)"]
 socks = ["PySocks (>=1.5.6,!=1.5.7)", "win-inet-pton"]
 
 [package.source]
@@ -166,7 +170,7 @@ python-versions = "*"
 [package.extras]
 docs = ["sphinx (>=1.5.3)"]
 qa = ["flake8"]
-test = ["nose", "mock"]
+test = ["mock", "nose"]
 
 [package.source]
 type = "legacy"
@@ -195,9 +199,9 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4"
 
 [package.extras]
-secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "ipaddress"]
-socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 brotli = ["brotlipy (>=0.6.0)"]
+secure = ["certifi", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "ipaddress", "pyOpenSSL (>=0.14)"]
+socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [package.source]
 type = "legacy"
@@ -207,7 +211,7 @@ reference = "piwheels"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "adf5b385b2a17b77962a0cead2f90ce2a2ca1cb0eddc473911542a4416703296"
+content-hash = "62c33d0fdebe86c46ec738a00ca2ed0177c620ee3648b0992c40153f649b0c3d"
 
 [metadata.files]
 certifi = [
@@ -228,10 +232,14 @@ miniflux = [
 numpy = [
     {file = "numpy-1.20.3-cp37-cp37m-linux_armv6l.whl", hash = "sha256:d840d80623c96696fab0d15489f49425bec1c0f47f3bf0b3362ce0c75dbad993"},
     {file = "numpy-1.20.3-cp37-cp37m-linux_armv7l.whl", hash = "sha256:d840d80623c96696fab0d15489f49425bec1c0f47f3bf0b3362ce0c75dbad993"},
+    {file = "numpy-1.20.3-cp39-cp39-linux_armv6l.whl", hash = "sha256:4c020adbaa398721cd5e30c5aab52b505efcd35c3b0156e800245c1274c96962"},
+    {file = "numpy-1.20.3-cp39-cp39-linux_armv7l.whl", hash = "sha256:4c020adbaa398721cd5e30c5aab52b505efcd35c3b0156e800245c1274c96962"},
 ]
 pillow = [
-    {file = "Pillow-8.2.0-cp37-cp37m-linux_armv6l.whl", hash = "sha256:3da86987a323708512d4d35939b29854286ad88940ee10f2eac48bfec9dba678"},
-    {file = "Pillow-8.2.0-cp37-cp37m-linux_armv7l.whl", hash = "sha256:3da86987a323708512d4d35939b29854286ad88940ee10f2eac48bfec9dba678"},
+    {file = "Pillow-9.2.0-cp37-cp37m-linux_armv6l.whl", hash = "sha256:a1a16ce765df1d000ed58cd0d97f374876d47947cf5e8e25fb4b6c23d06f2602"},
+    {file = "Pillow-9.2.0-cp37-cp37m-linux_armv7l.whl", hash = "sha256:a1a16ce765df1d000ed58cd0d97f374876d47947cf5e8e25fb4b6c23d06f2602"},
+    {file = "Pillow-9.2.0-cp39-cp39-linux_armv6l.whl", hash = "sha256:cc5b6062f384c0fae09b8e7218e8db386c0ff1d262ad807f28f159d69db0c8c9"},
+    {file = "Pillow-9.2.0-cp39-cp39-linux_armv7l.whl", hash = "sha256:cc5b6062f384c0fae09b8e7218e8db386c0ff1d262ad807f28f159d69db0c8c9"},
 ]
 python-dotenv = [
     {file = "python_dotenv-0.18.0-py2.py3-none-any.whl", hash = "sha256:dd8fe852847f4fbfadabf6183ddd4c824a9651f02d51714fa075c95561959c7d"},
@@ -257,6 +265,8 @@ spidev = [
     {file = "spidev-3.5-cp35-cp35m-linux_armv7l.whl", hash = "sha256:c810a1e2262bd949ffc9a4dbd831a54783d364705ecd6d3cc8b5b0b911db59e6"},
     {file = "spidev-3.5-cp37-cp37m-linux_armv6l.whl", hash = "sha256:20261448f6427beb63df6a13914acf7aeeabb25b2c01d4d90d2f1f14c8e70268"},
     {file = "spidev-3.5-cp37-cp37m-linux_armv7l.whl", hash = "sha256:20261448f6427beb63df6a13914acf7aeeabb25b2c01d4d90d2f1f14c8e70268"},
+    {file = "spidev-3.5-cp39-cp39-linux_armv6l.whl", hash = "sha256:fac5de521322fa884a58e517cdba46e964accedcb4d2f2df8d09d21303471737"},
+    {file = "spidev-3.5-cp39-cp39-linux_armv7l.whl", hash = "sha256:fac5de521322fa884a58e517cdba46e964accedcb4d2f2df8d09d21303471737"},
 ]
 urllib3 = [
     {file = "urllib3-1.26.4-py2.py3-none-any.whl", hash = "sha256:2f4da4594db7e1e110a944bb1b551fdf4e6c136ad42e4234131391e21eb5b0df"},
