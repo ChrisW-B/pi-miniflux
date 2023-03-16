@@ -145,13 +145,13 @@ reference = "piwheels"
 
 [[package]]
 name = "miniflux"
-version = "0.0.13"
+version = "0.0.15"
 description = "Client library for Miniflux API"
 category = "main"
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "miniflux-0.0.13-py2.py3-none-any.whl", hash = "sha256:283529347d7a84551eea43862a99107f291f1b251bf3bda00e65e926df90317d"},
+    {file = "miniflux-0.0.15-py2.py3-none-any.whl", hash = "sha256:cfce317596c51df18739dd55e1c6eec2b501ce531b6e230b527ecc8ea0c32c31"},
 ]
 
 [package.dependencies]
@@ -338,4 +338,4 @@ reference = "piwheels"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.7"
-content-hash = "6632b91a76a1d2e9fe8c103f84de37e79cef8a109f958d800bba21ecb562158e"
+content-hash = "cde1e49ae1b6d3835c71af5f211272cc1181a95421928fabb0c5a446c671db04"
