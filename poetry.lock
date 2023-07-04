@@ -183,20 +183,20 @@ reference = "piwheels"
 
 [[package]]
 name = "pillow"
-version = "9.4.0"
+version = "9.5.0"
 description = "Python Imaging Library (Fork)"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "Pillow-9.4.0-cp37-cp37m-linux_armv6l.whl", hash = "sha256:e2c9f200a7274e4cbde5fdd15b8b9846bd3671fb235aea6de3b7c9a77ee571d9"},
-    {file = "Pillow-9.4.0-cp37-cp37m-linux_armv7l.whl", hash = "sha256:e2c9f200a7274e4cbde5fdd15b8b9846bd3671fb235aea6de3b7c9a77ee571d9"},
-    {file = "Pillow-9.4.0-cp39-cp39-linux_armv6l.whl", hash = "sha256:e29ffa09816e07229f3665b0783d1460d0b758e25d89e252d7ac1026c3fcd464"},
-    {file = "Pillow-9.4.0-cp39-cp39-linux_armv7l.whl", hash = "sha256:e29ffa09816e07229f3665b0783d1460d0b758e25d89e252d7ac1026c3fcd464"},
+    {file = "Pillow-9.5.0-cp37-cp37m-linux_armv6l.whl", hash = "sha256:49ee5ac8a74ec585de47b7830e9f0fb6ded6ff84ee60848e289acb6ff302acd5"},
+    {file = "Pillow-9.5.0-cp37-cp37m-linux_armv7l.whl", hash = "sha256:49ee5ac8a74ec585de47b7830e9f0fb6ded6ff84ee60848e289acb6ff302acd5"},
+    {file = "Pillow-9.5.0-cp39-cp39-linux_armv6l.whl", hash = "sha256:31c483e43b1379058d8a6057bbbc62c10eb5cd9e1d2797ca4f4f7f3fa5a428df"},
+    {file = "Pillow-9.5.0-cp39-cp39-linux_armv7l.whl", hash = "sha256:31c483e43b1379058d8a6057bbbc62c10eb5cd9e1d2797ca4f4f7f3fa5a428df"},
 ]
 
 [package.extras]
-docs = ["furo", "olefile", "sphinx (>=2.4)", "sphinx-copybutton", "sphinx-inline-tabs", "sphinx-issues (>=3.0.1)", "sphinx-removed-in", "sphinxext-opengraph"]
+docs = ["furo", "olefile", "sphinx (>=2.4)", "sphinx-copybutton", "sphinx-inline-tabs", "sphinx-removed-in", "sphinxext-opengraph"]
 tests = ["check-manifest", "coverage", "defusedxml", "markdown2", "olefile", "packaging", "pyroma", "pytest", "pytest-cov", "pytest-timeout"]
 
 [package.source]
@@ -225,20 +225,20 @@ reference = "piwheels"
 
 [[package]]
 name = "requests"
-version = "2.28.2"
+version = "2.31.0"
 description = "Python HTTP for Humans."
 category = "main"
 optional = false
-python-versions = ">=3.7, <4"
+python-versions = ">=3.7"
 files = [
-    {file = "requests-2.28.2-py3-none-any.whl", hash = "sha256:e77536e318369f207754c018f33a97b68adec830f33bee3507d296683ba1d416"},
+    {file = "requests-2.31.0-py3-none-any.whl", hash = "sha256:471e7795897eff62a8e31f26f241e3e67ee80d1bd0f64236538a3dda8d3f1acc"},
 ]
 
 [package.dependencies]
 certifi = ">=2017.4.17"
 charset-normalizer = ">=2,<4"
 idna = ">=2.5,<4"
-urllib3 = ">=1.21.1,<1.27"
+urllib3 = ">=1.21.1,<3"
 
 [package.extras]
 socks = ["PySocks (>=1.5.6,!=1.5.7)"]
